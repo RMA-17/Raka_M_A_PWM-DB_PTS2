@@ -7,7 +7,7 @@ import WebLogo from "../assets/mang-games-logo.png"
 
 const Footer = () => {
   return (
-   <section id='footer' className='border-t-2 bg-[#2a475e] border-y-gray-500 flex flex-col static'>
+   <section id='footer' className='border-t-2 bg-[#2a475e] border-y-gray-500 flex flex-col'>
       <div className="flex py-14 max-lg:flex max-lg:py-10">
          <div className="flex flex-col justify-center px-20 w-full max-lg:px-5">
             <img className="w-64" src={WebLogo} alt="Web Logo"/>

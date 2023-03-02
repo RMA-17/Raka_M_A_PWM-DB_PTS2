@@ -2,7 +2,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import { CirclesWithBar } from "react-loader-spinner";
+import { Grid } from "react-loader-spinner";
 import { Link, useParams } from "react-router-dom";
 import "../../App.css";
 
@@ -58,12 +58,14 @@ const GameListContent = () => {
       </h2>
       <div className="flex flex-wrap py-12 gap-5 justify-center">
         {isLoading ? (
-          <CirclesWithBar
-            height="100"
-            width="100"
-            color="#092148"
-            visible="true"
-          />
+          <div className="flex justify-center items-center">
+            <Grid
+              height="100"
+              width="100"
+              color="#2f73ee"
+              visible="true"
+            />
+          </div>
         ) : isSuccess ? (
           <>
             {gameList?.slice(0, 32).map((game) => (

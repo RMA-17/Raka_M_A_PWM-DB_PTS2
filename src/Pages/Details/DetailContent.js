@@ -4,7 +4,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { CirclesWithBar } from "react-loader-spinner";
+import { Grid } from "react-loader-spinner";
 import "../../App.css";
 import { Helmet } from "react-helmet";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -57,8 +57,8 @@ const DetailContent = () => {
       </Helmet>
       {isLoading ? (
         <>
-          <div className="flex justify-center items-center bg-black">
-            <CirclesWithBar
+          <div className="flex h-screen justify-center items-center bg-black">
+            <Grid
               height="100"
               width="100"
               color="#2f73ee"
@@ -76,8 +76,8 @@ const DetailContent = () => {
               backgroundSize: "cover",
             }}
           >
-            <div className="w-1/4 p-4 block">
-              <div className="h-64 pt-2 flex flex-col">
+            <div className="w-1/4 p-4 side-bar-container">
+              <div className="h-64 pt-2 sticky-top flex flex-col">
                 <img
                   className="h-48 rounded-xl"
                   src={game.thumbnail}
@@ -117,7 +117,7 @@ const DetailContent = () => {
                 </button>
               </div>
             </div>
-            <div className="w-3/4 flex pb-10 px-8 flex-col">
+            <div className="w-3/4 pb-10 px-8 flex flex-col">
               <Swiper
                 style={{
                   "--swiper-navigation-color": "#fff",
