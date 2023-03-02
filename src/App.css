@@ -1,38 +1,296 @@
-.App {
+/* Home Section */
+
+.nav-item-list li a {
+  @apply py-2 px-4 text-white;
+  transition: 0.2s;
+}
+
+.nav-item-list li a:hover {
+  @apply bg-white rounded-full text-brand-color;
+}
+
+header {
+  @apply transition-all ease-in-out z-50;
+}
+
+header.sticky {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  @apply mx-0 bg-brand-color flex w-full rounded-b-2xl py-4 text-white;
+}
+
+.header-container {
+  @apply w-full fixed;
+}
+
+.header-container.sticky {
+  @apply rounded-b-2xl fixed z-50;
+}
+
+#home {
+  @apply w-full;
+}
+
+.image-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+    url("./assets/wallpaper.jpg");
+  background-position: center center;
+  background-size: cover;
+  @apply mx-14 h-screen rounded-3xl;
+}
+
+/* Category */
+
+#category {
+  @apply mx-10;
+}
+
+.category-container {
+  @apply flex flex-wrap p-5 justify-center items-center gap-5;
+}
+
+.category-item {
+  @apply font-bold cursor-pointer rounded-xl h-64 w-64 mx-2 items-center justify-center flex flex-col bg-secondary-color text-white ease-in-out transition-transform gamer-header;
+}
+
+.category-item.shooter-item {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("https://d3dwep9z8m8y9r.cloudfront.net/teams/2022/05/teams-369/background/27582/conversions/964-(2)-webp.webp");
+  background-position: center center;
+  background-size: cover;
+  @apply hover:scale-105 transition-all hover:brightness-150;
+}
+
+.category-item.moba-item {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("https://www.gaming.net/wp-content/uploads/2022/05/Dota-2-768x432.jpg");
+  background-position: center center;
+  background-size: cover;
+  @apply hover:scale-105 transition-all hover:brightness-150;
+}
+
+.category-item.mmorpg-item {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("https://static.bandainamcoent.eu/high/sword-art-online/brand-setup/sao-brand-mobile-624x468.jpg");
+  background-position: center center;
+  background-size: cover;
+  @apply hover:scale-105 transition-all hover:brightness-150;
+}
+
+.category-item.fighting-item {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("https://d1lss44hh2trtw.cloudfront.net/assets/article/2022/06/01/tekken-7-becomes-franchises-best-selling-game-with-9-million-unit-sales_feature.jpg");
+  background-position: center center;
+  background-size: cover;
+  @apply hover:scale-105 transition-all hover:brightness-150;
+}
+
+.category-item.battleroyale-item {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("https://miro.medium.com/max/1400/1*OSVptnNeegbjhnSWo2V_qw.jpeg");
+  background-position: center center;
+  background-size: cover;
+  @apply hover:scale-105 transition-all hover:brightness-150;
+}
+
+.category-item.openworld-item {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("https://jagatplay.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/gta-v-next-gen.jpg.webp");
+  background-position: center center;
+  background-size: cover;
+  @apply hover:scale-105 transition-all hover:brightness-150;
+}
+
+.category-item.horror-item {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("https://www.trustedreviews.com/wp-content/uploads/sites/54/2020/06/thumb-1920-313609-1024x576.jpg");
+  background-position: center center;
+  background-size: cover;
+  @apply hover:scale-105 transition-all hover:brightness-150;
+}
+
+.category-item.fantasy-item {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("https://cdn.vox-cdn.com/thumbor/tpgbxjbWlu1Ta7AarUE8BYNNoRc=/0x0:1200x800/1200x800/filters:focal(504x304:696x496)/cdn.vox-cdn.com/uploads/chorus_image/image/66677260/FF7REmakeExitSurvey_SquareEnix_Ringer.0.jpg");
+  background-position: center center;
+  background-size: cover;
+  @apply hover:scale-105 transition-all hover:brightness-150;
+}
+
+.category-item.scifi-item {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("https://store-images.s-microsoft.com/image/apps.59413.69545190943188987.bad7c420-51af-4579-8383-72696799c908.4c6a4319-7fad-41d0-af60-86a68930416a?q=90&w=480&h=270");
+  background-position: center center;
+  background-size: cover;
+  @apply hover:scale-105 transition-all hover:brightness-150;
+}
+
+.category-item.military-item {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("https://images.immediate.co.uk/production/volatile/sites/3/2021/04/Call-of-Duty.jpg-d196774.png");
+  background-position: center center;
+  background-size: cover;
+  @apply hover:scale-105 transition-all hover:brightness-150;
+}
+
+.category-item.space-item {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("https://www.avsforum.com/cdn-cgi/image/format=auto,onerror=redirect,width=1920,height=1920,fit=scale-down/https://www.avsforum.com/attachments/interstellar_voyage-3840x2160-jpg.3019544/");
+  background-position: center center;
+  background-size: cover;
+  @apply hover:scale-105 transition-all hover:brightness-150;
+}
+
+.category-item.superhero-item {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("https://www.komar.de/en/media/cms/fileadmin/user_upload/Category/Fototapeten/Marvel/komar-fototapeten-marvel.jpg");
+  background-position: center center;
+  background-size: cover;
+  @apply hover:scale-105 transition-all hover:brightness-150;
+}
+
+.category-item.sports-item {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("https://media.suara.com/pictures/653x366/2020/07/19/84732-pes-2021-konami.jpg");
+  background-position: center center;
+  background-size: cover;
+  @apply hover:scale-105 transition-all hover:brightness-150;
+}
+
+/* About */
+
+#about {
+  @apply flex py-24 px-16;
+}
+
+.about-card {
+  @apply border-2 border-white;
+}
+
+/* Footnotes */
+
+.hoveriser:hover .fa-icons {
+  transition: 0.3s;
+  @apply text-secondary-color;
+}
+
+/* Category */
+
+#category-content {
+  @apply flex flex-col py-10 px-12;
+}
+
+.game-item {
+  @apply font-bold rounded-xl h-28 w-56 my-4 mx-2 items-center justify-center flex flex-col text-brand-color ease-in-out transition-transform hover:bg-white;
+}
+
+.game-item-content {
+  @apply w-full h-0 hidden px-2 py-2;
+}
+
+.game-item-thumb {
+  @apply object-cover w-full rounded-md;
+}
+
+.game-item-thumb-container {
+  @apply w-full h-full;
+}
+
+.game-item:hover {
+  @apply scale-125 h-64;
+}
+
+.game-item:hover .game-item-content {
+  transition: 0.3s;
+  @apply h-1/2 block;
+}
+
+.game-item:hover .game-item-thumb-container {
+  transition: 0.3s;
+  @apply h-1/2 block;
+}
+
+.game-item:hover .game-item-thumb-container .btn_detail {
+  @apply block;
+}
+
+.game-item:hover .game-item-thumb-container img {
+  transition: 0.3s;
+  @apply brightness-50;
+}
+
+/* Detail */
+
+#detail-content {
+  background-position: center center;
+  background-size: cover;
+  position: static;
+  @apply flex;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-size: 18px;
+  background: #fff;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+
+.mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Category List */
+
+#category-list {
+  @apply flex flex-col py-12 px-5;
 }
