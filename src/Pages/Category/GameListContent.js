@@ -58,7 +58,7 @@ const GameListContent = () => {
       </h2>
       <div className="flex flex-wrap py-12 gap-5 justify-center">
         {isLoading ? (
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center h-screen">
             <Grid
               height="100"
               width="100"
