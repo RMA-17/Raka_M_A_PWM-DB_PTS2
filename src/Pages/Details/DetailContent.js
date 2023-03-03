@@ -174,19 +174,28 @@ const DetailContent = () => {
               <h2 className="text-white text-2xl font-bold pt-12 gamer-header">
                 System Requirements
               </h2>
-              <div className="text-white pt-5">
-                <h4 className="font-semibold">OS: <span className="font-bold">{`${game.minimum_system_requirements.os}`}</span></h4>
-                <h4 className="font-semibold">Processor: <span className="font-bold">{`${game.minimum_system_requirements.processor}`}</span></h4>
-                <h4 className="font-semibold">Memory: <span className="font-bold">{`${game.minimum_system_requirements.memory}`}</span></h4>
-                <h4 className="font-semibold">Graphics: <span className="font-bold">{`${game.minimum_system_requirements.graphics}`}</span> </h4>
-                <h4 className="font-semibold">Storage: <span className="font-bold">{`${game.minimum_system_requirements.storage}`}</span></h4>
-              </div>
+              {
+                game.minimum_system_requirements? (
+                  <div className="text-white pt-5">
+                    <h4 className="font-semibold">OS: <span className="font-bold">{`${game.minimum_system_requirements.os}`}</span></h4>
+                    <h4 className="font-semibold">Processor: <span className="font-bold">{`${game.minimum_system_requirements.processor}`}</span></h4>
+                    <h4 className="font-semibold">Memory: <span className="font-bold">{`${game.minimum_system_requirements.memory}`}</span></h4>
+                    <h4 className="font-semibold">Graphics: <span className="font-bold">{`${game.minimum_system_requirements.graphics}`}</span> </h4>
+                    <h4 className="font-semibold">Storage: <span className="font-bold">{`${game.minimum_system_requirements.storage}`}</span></h4>
+                  </div>
+                ) :
+                (
+                  <div className="text-white pt-5">
+                    <p className="text-justify">Currently, we can't provide any information for this game minimum requirements, we will add them maybe in the future. <br /> This is happened because <span className="font-bold">We don't have any information about this</span> or <span className="font-bold">this game runs properly in your PC</span></p>
+                  </div>
+                )
+              }
             </div>
           </section>
         </>
       ) : (
         <div className="flex h-screen justify-center items-center">
-          <h1 className="text-4xl font-semibold">Error fetching data</h1>
+          <h1 className="text-4xl text-white font-semibold">Error fetching data</h1>
         </div>
       )}
     </>

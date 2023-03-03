@@ -99,7 +99,7 @@ const GameListContent = () => {
           </>
         ) : (
           <div className="flex h-screen justify-center items-center">
-          <h1 className="text-4xl font-semibold">Error fetching data</h1>
+          <h1 className="text-4xl text-white font-semibold">Error fetching data</h1>
         </div>
         )}
       </div>
